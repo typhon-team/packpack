@@ -38,5 +38,10 @@ RUN apt-get update && apt-get install -y --force-yes \
     alien \
     dh-systemd
 
+# Install varnish
+RUN curl -s https://packagecloud.io/install/repositories/varnishcache/varnish51/script.deb.sh | bash
+RUN apt-get update && apt-get install -y --force-yes varnish-dev
+
+
 # Enable sudo without password
 RUN echo '%adm ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
