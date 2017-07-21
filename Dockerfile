@@ -39,7 +39,7 @@ RUN apt-get update && apt-get install -y --force-yes \
     dh-systemd
 
 # Install varnish
-RUN curl -s https://packagecloud.io/install/repositories/varnishcache/varnish4/script.deb.sh | bash
+RUN curl -s https://packagecloud.io/install/repositories/varnishcache/varnish41/script.deb.sh | bash
 RUN apt-get update && apt-get install -y --force-yes varnish-dev
 
 
