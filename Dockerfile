@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:stretch
 MAINTAINER Tech <tech@typhon.com>
 
 # Fix missing locales
@@ -17,8 +17,6 @@ RUN apt-get update && apt-get install -y --force-yes \
     wget \
     gnupg \
     ca-certificates
-ADD backports.list /etc/apt/sources.list.d/
-ADD preferences /etc/apt/preferences.d/
 
 # Install base toolset
 RUN apt-get update && apt-get install -y --force-yes \
