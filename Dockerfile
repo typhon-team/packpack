@@ -38,3 +38,6 @@ RUN apt-get update && apt-get install -y --force-yes \
 
 # Enable sudo without password
 RUN echo '%adm ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
+# Fix invoke-rc.d
+RUN sed -i 's/101/0/' /usr/sbin/policy-rc.d
