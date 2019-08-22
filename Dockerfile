@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:buster
 MAINTAINER Tech <tech@typhon.com>
 
 # Fix missing locales
